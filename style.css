@@ -11,6 +11,10 @@ body{
     color: white;
 }
 
+.navbar{
+    width: 100vw;
+}
+
 a.nav-link, a.navbar-brand{
     color: rgb(0, 0, 0);
     transition: all .3s ease-in-out;
@@ -76,9 +80,12 @@ a.nav-link:hover, a.navbar-brand:hover{
     color: rgba(0, 0, 0);
 }
 
+
+
 .about{
     margin: 400px auto;
     width: 80%;
+    overflow-x: hidden;
 }
 
 .imgabout img{
@@ -99,6 +106,11 @@ h1.motivasi-about span{
 .imgabout p{
     font-weight: 300;
     font-size: 15px;
+}
+
+
+.skills{
+    overflow-x: hidden;
 }
 
 
@@ -126,9 +138,9 @@ h1.motivasi-about span{
     }
 }
 
-.imgoverlay{
-    width: 400px;
-    height: 400px;
+
+.contact{
+    overflow-x: hidden;
 }
 
 
@@ -225,17 +237,3 @@ button{
         font-size: 25px;
     }
 }
-
- .cf:before,
- .cf:after {
-     content: " ";
-     display: table;
- }
- 
- .cf:after {
-     clear: both;
- }
-
- .cf {
-     *zoom: 1;
- }
