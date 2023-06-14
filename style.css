@@ -89,18 +89,19 @@ a.nav-link:hover, a.navbar-brand:hover{
 }
 
 .imgabout img{
+    width: 70%;
     border-radius: 14px;
     box-shadow: 1px 1px 10px rgba(255, 255, 255, .5);
 }
 
 h1.motivasi-about{
     font-family: 'Gochi Hand', sans-serif;
-    font-size: 50px;
+    font-size: 3em;
 }
 
 h1.motivasi-about span{
     font-family: 'Gochi Hand', sans-serif;
-    font-size: 35px;
+    font-size: .5em;
 }
 
 .imgabout p{
@@ -116,10 +117,11 @@ h1.motivasi-about span{
 
 
 .projects{
-    height: 400px;
-    margin: 400px 20px;
+    margin: 400px auto;
+    padding: 20px;
     box-sizing: border-box;
 }
+
 
 .projects h1{
     text-align: center;
@@ -129,8 +131,8 @@ h1.motivasi-about span{
 .header{
     overflow: hidden;
     position: relative;
-    display: flex;
 }
+
 .header span{
     opacity: 0;
     width: 0;
@@ -191,11 +193,63 @@ button{
 
 @media (min-width: 768px) {
     .card{
-        width: 231px;
+        width: 300px;
+        margin-left: 20px;
+        margin-top: 0 !important;
     }
 
-    .card img{
-        width: 230px;
+    .container-card{
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .header span{
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        color: white;
+        text-align: center;
+        line-height: 120px;
+    }
+    
+    .header a:hover span{
+        opacity: 1;
+    }
+    
+    .overlay{
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        z-index: 999;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        display: flex;
+        opacity: 1;
+    }
+    
+    .overlay:target{
+        bottom: 0;
+        right: 0;  
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 100px;
+    }
+
+    img.imgoverlay{
+        width: 1000px;
+        height: 70%px;
+        margin: auto;
+        border: 5px solid white;
     }
 }
 
@@ -203,6 +257,12 @@ button{
     .text{
         font-size: 30px;
         width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .imgabout img{
+        width: 300px;
     }
 }
 
@@ -235,12 +295,15 @@ button{
         width: 30%;
     }
 
-    .card{
-        width: 321px;
+    .container-card{
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
     }
 
-    .card img{
-        width: 320px;
+    .card{
+        margin-left: 20px;
+        margin-top: 0 !important;
     }
 
     .contact h1, .contact .col-md-4{
@@ -262,7 +325,7 @@ button{
         transition: all .3s ease-in-out;
         color: white;
         text-align: center;
-        line-height: 160px;
+        line-height: 120px;
     }
     
     .header a:hover span{
@@ -282,13 +345,6 @@ button{
         display: flex;
         opacity: 1;
     }
-
-    .overlay a.close {
-        color: rgb(0, 0, 0);
-        position: absolute;
-        font-size: 35px;
-        transform: translateX(70px);
-    }
     
     .overlay:target{
         bottom: 0;
@@ -302,7 +358,6 @@ button{
     img.imgoverlay{
         width: 1000px;
         height: 500px;
-        border: 5px solid white;
         margin: auto;
     }
 }
